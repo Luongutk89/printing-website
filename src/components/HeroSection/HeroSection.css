@@ -1,0 +1,94 @@
+.hero-section {
+    display: flex;
+    gap: 20px;
+     padding-top: 10px;
+}
+
+.hero-main {
+    flex: 2;
+    /* Occupies 2/3 of the container width */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    /* Optional: Adds rounded corners */
+}
+
+.hero-main-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    /* Ensures the image covers the container without distortion */
+}
+
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    z-index: 2;
+}
+
+.arrow-btn:hover {
+    opacity: 1;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.hero-small-banners {
+    flex: 1;
+    /* Occupies 1/3 of the container width */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Space between small banners */
+}
+
+.small-banner {
+    flex: 1 1 calc(50% - 10px);
+    /* Each small banner takes 50% of the available width with some gap */
+    box-sizing: border-box;
+}
+
+.small-banner a {
+    display: block;
+    height: 100%;
+}
+
+.small-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures images maintain their aspect ratio without distortion */
+    border-radius: 8px;
+    /* Optional: Adds rounded corners */
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        /* Stacks banners vertically on smaller screens */
+    }
+
+    .hero-main,
+    .hero-small-banners {
+        width: 100%;
+    }
+
+    .small-banner {
+        flex: 1 1 100%;
+        /* Small banners take full width on smaller screens */
+    }
+}

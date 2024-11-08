@@ -1,0 +1,90 @@
+/* Định dạng chung cho container */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Form đăng nhập/đăng ký */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nhóm form */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Nhãn cho các input */
+label {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Input */
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #4a90e2;
+}
+
+/* Nút đăng nhập/đăng ký */
+.login-button {
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #357ab7;
+}
+
+/* Thông báo lỗi */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Phần chuyển đổi giữa đăng nhập và đăng ký */
+.toggle-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.toggle-form button {
+    background: none;
+    border: none;
+    color: #4a90e2;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.toggle-form button:hover {
+    text-decoration: underline;
+}

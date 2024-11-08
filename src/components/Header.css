@@ -1,0 +1,83 @@
+/* Header Styling */
+.header {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.header-nav {
+    display: flex;
+    gap: 20px;
+}
+
+/* Links Styling */
+.header-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header-link:hover {
+    color: #007bff;
+}
+
+/* Dropdown Styling */
+.header-dropdown {
+    position: relative;
+}
+
+.header-dropdown:hover .dropdown-menu {
+    display: block;
+    /* Show dropdown when parent is hovered */
+}
+
+.dropdown-menu {
+    display: none;
+    /* Hide by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.dropdown-item {
+    text-decoration: none;
+    padding: 8px 16px;
+    color: #333;
+    font-size: 14px;
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+    color: #007bff;
+}
+
+/* Search Bar Styling */
+.header-search {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header-search .form-control {
+    width: 250px;
+    padding: 5px;
+}
+
+.header-search .btn {
+    padding: 5px 10px;
+}
