@@ -3,7 +3,7 @@ import './Footer.css'; // Import the external CSS file
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer container">
       {/* Contact Information */}
       <div className="footer-column">
         <h3>Thương Hiệu Thành Viên</h3>

@@ -1,83 +1,158 @@
-/* Header Styling */
+/* Header container */
 .header {
     background-color: #f8f9fa;
-    padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.header-logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #007bff;
-}
-
-.header-nav {
-    display: flex;
-    gap: 20px;
-}
-
-/* Links Styling */
-.header-link {
-    text-decoration: none;
-    font-size: 16px;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.header-link:hover {
-    color: #007bff;
-}
-
-/* Dropdown Styling */
-.header-dropdown {
-    position: relative;
-}
-
-.header-dropdown:hover .dropdown-menu {
-    display: block;
-    /* Show dropdown when parent is hovered */
-}
-
-.dropdown-menu {
-    display: none;
-    /* Hide by default */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    min-width: 200px;
-    padding: 10px 0;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
-.dropdown-item {
+/* Logo styling */
+.header .logo {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
+}
+
+/* Navigation links */
+.header .header-nav {
+    gap: 15px;
+    /* Spacing between navigation links */
+}
+
+.header .header-link {
     text-decoration: none;
-    padding: 8px 16px;
     color: #333;
-    font-size: 14px;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.header .header-link:hover {
+    color: #007bff;
+    /* Hover effect color */
+}
+
+/* Dropdown menu styling */
+.header .header-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.header .header-dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    padding: 10px 0;
+    list-style: none;
+}
+
+.header .header-dropdown:hover .dropdown-menu {
     display: block;
 }
 
-.dropdown-item:hover {
-    background-color: #f1f1f1;
-    color: #007bff;
+.header .dropdown-item {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    display: block;
 }
 
-/* Search Bar Styling */
-.header-search {
+.header .dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Search bar styling */
+.header .header-search {
     display: flex;
-    gap: 10px;
     align-items: center;
 }
 
-.header-search .form-control {
-    width: 250px;
-    padding: 5px;
+.header .header-search input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
 }
 
-.header-search .btn {
-    padding: 5px 10px;
+.header .header-search input:focus {
+    border-color: #007bff;
+}
+
+.header .header-search button {
+    padding: 5px 15px;
+    margin-left: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header .header-search button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .header-nav {
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+
+    .header .header-search {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .header .header-search input {
+        width: 100%;
+    }
+
+    .header .header-search button {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+.header-link {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    /* Set the color of the text */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+}
+
+.header-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: blue;
+    /* Blue color for the underline */
+    transition: width 0.3s ease;
+    /* Animation for the underline */
+}
+
+.header-link:hover {
+    color: blue;
+    /* Change text color on hover */
+}
+
+.header-link:hover::after {
+    width: 100%;
+    /* Expand underline to full width */
 }

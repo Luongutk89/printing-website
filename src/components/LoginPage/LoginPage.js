@@ -20,7 +20,12 @@ const LoginPage = () => {
       return;
     }
     setError('');
-    console.log('Đăng nhập với', email, password);
+    // Kiểm tra thông tin đăng nhập (Ví dụ đơn giản với email và mật khẩu mặc định)
+    if (email === 'admin@example.com' && password === 'admin123') {
+      navigate('/admin'); // Điều hướng đến trang Admin nếu đăng nhập thành công
+    } else {
+      setError('Thông tin đăng nhập không chính xác.');
+    }
   };
 
   // Xử lý đăng ký
@@ -60,7 +65,7 @@ const LoginPage = () => {
             required
           />
         </div>
-        
+
         {isRegistering && (
           <div className="form-group">
             <label>Số điện thoại:</label>

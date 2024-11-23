@@ -42,6 +42,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;
+    margin-bottom: 10px; /* Thêm margin-bottom để các input không dính vào nhau */
 }
 
 input:focus {
@@ -87,4 +88,34 @@ input:focus {
 
 .toggle-form button:hover {
     text-decoration: underline;
+}
+
+/* Chỉnh sửa cho mắt ẩn/hiện mật khẩu */
+.show-password-btn {
+    background: none;
+    border: none;
+    color: #4a90e2;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+/* Hiệu ứng cho show/hide mật khẩu */
+.show-password-btn:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .login-button {
+        font-size: 14px;
+    }
 }

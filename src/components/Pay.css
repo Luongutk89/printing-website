@@ -1,0 +1,120 @@
+/* General styles */
+.pay-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+h3 {
+  color: #333;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+/* Customer Info Section */
+.customer-info p {
+  font-size: 1em;
+  margin: 8px 0;
+}
+
+.customer-info strong {
+  font-weight: bold;
+}
+
+/* Payment Method Section */
+.payment-method select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.payment-method p {
+  margin-top: 10px;
+  font-style: italic;
+  color: #666;
+}
+
+/* Product List */
+.product-list {
+  margin-top: 30px;
+}
+
+.product-list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.product-item {
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.total-price {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Button */
+.payment-actions button {
+  padding: 12px 20px;
+  font-size: 1em;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.payment-actions button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.payment-actions button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+/* Payment Success Section */
+.payment-success {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 30px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.payment-success h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.payment-success p {
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .pay-container {
+    padding: 15px;
+  }
+
+  .payment-method select,
+  .payment-actions button {
+    width: 100%;
+  }
+}

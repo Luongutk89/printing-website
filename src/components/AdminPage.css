@@ -1,71 +1,108 @@
-/* AdminPage.css */
-
-.admin-container {
-    max-width: 800px;
-    margin: 0 auto;
+/* Admin Page Container */
+.admin-page {
+    font-family: Arial, sans-serif;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f4f4f9;
 }
 
-h1,
-h3 {
+/* Header */
+h2 {
     text-align: center;
     color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-.customer-info,
-.payment-method,
-.product-list,
-.total-price {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-select {
+/* Input Fields */
+input[type="text"],
+input[type="number"] {
     width: 100%;
     padding: 10px;
-    font-size: 16px;
+    margin: 10px 0;
+    font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin-top: 10px;
+    box-sizing: border-box;
 }
 
-.customer-info p,
-.payment-method p,
-.total-price p {
-    font-size: 16px;
-    color: #555;
-    margin: 5px 0;
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #007bff;
+    outline: none;
 }
 
-.customer-info strong,
-.product-item strong,
-.payment-method strong {
-    color: #333;
+/* Buttons */
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.product-list ul {
+button:hover {
+    background-color: #218838;
+}
+
+/* Edit and Delete Buttons */
+button.edit, button.delete {
+    background-color: #007bff;
+    margin-left: 10px;
+}
+
+button.edit:hover {
+    background-color: #0056b3;
+}
+
+button.delete {
+    background-color: #dc3545;
+}
+
+button.delete:hover {
+    background-color: #c82333;
+}
+
+/* Product List */
+ul {
     list-style-type: none;
     padding: 0;
 }
 
-.product-item {
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px;
-    border-bottom: 1px solid #eee;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.product-item:last-child {
-    border-bottom: none;
-}
-
-.total-price {
-    font-size: 18px;
-    text-align: right;
+li span {
+    font-size: 1rem;
     color: #333;
-    font-weight: bold;
 }
+
+/* Form Section */
+.form-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add/Edit Product Buttons */
+button.add, button.update {
+    background-color: #007bff;
+    margin-top: 10px;
+}
+
+button.add:hover, button.update:hover {
+    background-color: #0056b3;
+}
+

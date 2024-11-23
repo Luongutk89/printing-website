@@ -11,7 +11,7 @@ const CartPage = () => {
     phone: '',
     address: '',
   });
-  const [showModal, setShowModal] = useState(false); // State để hiển thị modal
+  const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
   const handleInputChange = (e) => {
@@ -20,9 +20,23 @@ const CartPage = () => {
   };
 
   const handleCheckout = () => {
-    // Kiểm tra các trường thông tin có giá trị
+    // Kiểm tra nếu thông tin khách hàng chưa đầy đủ
     if (!customerInfo.name || !customerInfo.email || !customerInfo.phone || !customerInfo.address) {
       alert('Vui lòng điền đầy đủ thông tin!');
+      return;
+    }
+
+    // Kiểm tra định dạng email
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailRegex.test(customerInfo.email)) {
+      alert('Email không hợp lệ!');
+      return;
+    }
+
+    // Kiểm tra định dạng số điện thoại (kiểm tra cơ bản)
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(customerInfo.phone)) {
+      alert('Số điện thoại không hợp lệ!');
       return;
     }
 
@@ -32,16 +46,16 @@ const CartPage = () => {
       total: getTotalPrice(),
     };
 
-    // Chuyển hướng tới trang Admin và gửi thông tin order
-    navigate('/admin', { state: order });
+    // Chuyển đến trang thanh toán và truyền thông tin đơn hàng
+    navigate('/pay', { state: order });
   };
 
   const openModal = () => {
-    setShowModal(true); // Mở modal khi nhấn "Thanh toán"
+    setShowModal(true);
   };
 
   const closeModal = () => {
-    setShowModal(false); // Đóng modal khi nhấn "Đóng" hoặc gửi thông tin
+    setShowModal(false);
   };
 
   return (
@@ -62,7 +76,7 @@ const CartPage = () => {
               </tr>
             </thead>
             <tbody>
-              {cart.map(item => (
+              {cart.map((item) => (
                 <tr key={item.id}>
                   <td>{item.name}</td>
                   <td>{item.price.toLocaleString()}₫</td>
@@ -89,7 +103,7 @@ const CartPage = () => {
         </div>
       )}
 
-      {/* Modal hiển thị khi nhấn Thanh toán */}
+      {/* Modal để hiển thị thông tin khách hàng khi nhấn "Thanh toán" */}
       {showModal && (
         <div className="modal">
           <div className="modal-content">
@@ -133,7 +147,7 @@ const CartPage = () => {
                   value={customerInfo.address}
                   onChange={handleInputChange}
                   required
-                  />
+                />
               </div>
               <div className="modal-actions">
                 <button type="submit">Gửi</button>

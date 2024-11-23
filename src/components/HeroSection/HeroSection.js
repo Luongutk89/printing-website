@@ -24,6 +24,12 @@ const HeroSection = () => {
       img: 'https://thietkeinanquangcao.com/upload/hinhanh2/mau-thiet-ke-tap-chi-dep-05.jpg',
       link: '#special-offer',
     },
+    {
+      id: 5,
+      img: 'https://magiamgiashopee.vn/wp-content/uploads/2023/09/Anh-6.jpg',
+      link: '#special-offer',
+    },
+    
   ];
 
   // Mảng banner nhỏ (4 ảnh)
